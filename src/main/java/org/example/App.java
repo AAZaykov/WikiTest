@@ -15,7 +15,7 @@ public class App{
         boolean isExit = false;
             while (!isExit) {
                 try {
-                    System.out.println("Для поиска по Википедии введите запрос:");
+                    System.out.println("To search Wikipedia, enter the query:");
                     String request = scanner.nextLine();
                     String wikipediaUrl = "https://ru.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&utf8=1&explaintext=&titles="
                             + URLEncoder.encode(request, "UTF-8");
@@ -29,7 +29,7 @@ public class App{
                     System.out.println(result);
                     isExit = true;
                 } catch (Exception ex) {
-                    System.out.println("Неправильный запрос или такой страницы на Википедии не существует");
+                    System.out.println("Invalid query or Wikipedia page does not exist");
                 }
             }
     }
